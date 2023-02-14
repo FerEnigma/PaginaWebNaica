@@ -1,0 +1,104 @@
+{% extends "myapp/base.html" %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %}Naica{% endblock %}
+
+{% block id %}index{% endblock %}
+
+{% block content %}
+	<section class="intro">
+		<div class="wrap">
+			<img class="transitionable" src="{% static 'myapp/img/index-1.png' %}" alt="Ascendant Technology">
+			
+			<h1 class="sc">{% blocktranslate %}<span>Ascendant</span> <span>technology</span>{% endblocktranslate %}</h1>
+			
+			<p class="p-xl">{% translate 'We develop high-impact projects with clear strategies that promote positive growth in Mexico and the United States' %}</p>
+			
+			<div class="video-space">
+				<video playsinline autoplay loop muted poster="">
+		           <source src="{% static 'myapp/video/naica-temp.mp4' %}" type="video/mp4">
+		        </video>
+			</div>
+			
+			<h2 class="b">{% translate 'Working towards innovative & technological solutions' %}</h2>
+			
+			<p>{% translate 'Naica is compelled to acquire expertise and apply it into improving any process through technology. Breaking business-making paradigms by disrupting the status quo of projects with social and economic results.' %}</p>
+			
+			<a href="" class="cta">{% translate 'Know more about us' %}</a>
+		</div>
+	</section>
+	
+	<section class="alliances">
+		<div class="wrap">
+			<div class="title transitionable">
+				<h2 class="title-xl">{% translate 'Meaningful alliances are key' %}</h2>
+				
+				<img src="{% static 'myapp/img/deco/crystals-01.png' %}" alt="">
+			</div>
+			
+			{% if latest_ally_list %}
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+			    {% for ally in latest_ally_list %}
+					<div class="swiper-slide">
+						<img src="{{ally.ally_image.url}}" alt="{{ ally.ally_name }}">
+					</div>
+			    {% endfor %}
+				</div>
+				
+				<div class="btn-next"></div>
+				<div class="btn-prev"></div>
+			</div>
+			{% else %}
+			    <p>{% translate 'No allies yet.' %}</p>
+			{% endif %}
+			
+			<div class="text-space">
+				<p>{% translate 'Our capacity to discover and connect individuals and business enterprises to various endeavours make us a trustworthy companion.' %}</p>
+				<a href="" class="cta side">{% translate 'See all our alliances' %}</a>
+			</div>
+		</div>
+	</section>
+	
+	<section class="cta-box transitionable">		
+		<div class="wrap">
+			<div class="img-cont">
+				<img src="{% static 'myapp/img/get-in-touch-01.jpg' %}" alt="Businessman">
+			</div>
+			
+			<div class="text-space">
+				<h2>{% translate 'You might want to join our disruptive community' %}</h2>
+				<p>{% translate 'Get in contact so we can talk and see if we can grow together.' %}</p>
+				
+				<a href="{% url 'about' %}" class="cta alt">{% translate 'Know more about us' %}</a>
+			</div>
+		</div>
+	</section>	
+	
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+	
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			spaceBetween: 30,
+			navigation: {
+				nextEl: ".btn-next",
+				prevEl: ".btn-prev",
+			},
+			
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				
+				// when window width is >= 1024px
+				1024: {
+					slidesPerView: 5,
+				}
+			}
+		});
+	</script>
+{% endblock %}

@@ -1,0 +1,262 @@
+body#contact {
+	.contact.means {
+		.img-box {
+			margin: 0 auto;
+			position: relative;
+			
+			img {
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+		
+		ul {
+			li {
+				text-align: center;
+				
+				h4 {
+					@include text();
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	
+	.contact-form {
+		h2 {
+			margin: 0 auto;
+			text-align: center;
+		}
+		
+		form {
+			width: 100%;
+			
+			table {
+				width: 100%;
+				
+				tbody tr {
+					th {
+						label {
+							text-align: right;
+							font-weight: 300;
+							@extend p;
+							
+							display: inline-block;
+						}
+					}
+					
+					td {
+						width: 100%;
+						position: relative;
+						
+						.errorlist {
+							li {
+								@extend p;
+								color: $purple;
+							}
+						}
+						
+						input, textarea {
+							width: 100%;
+							border: none;
+							appearance: none;
+							outline: none;
+							background-color: transparent;
+						}
+						
+						label, input, textarea {
+							font-weight: 300;
+							@extend p;
+						}
+						
+						textarea {
+							@include flex();
+						}
+						
+						&.submit {
+							input {
+								text-align: left;
+								
+								&:hover {
+									cursor: pointer;
+									color: $purple;
+								}
+							}
+						}
+					}
+					
+					td:last-of-type {
+						position: relative;
+						
+						&:before {
+							background: rgb(0,0,0);
+							background: linear-gradient(90deg, rgba(134,81,251,1) 50%, rgba(0,0,0,1) 100%);
+							content: "";
+							width: 100%;
+							height: 2px;
+							display: block;
+							
+							position: absolute;
+							bottom: 0;
+							left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Small
+@media screen and (max-width : $desktop - 1) {
+	body#contact {
+		.contact.means {
+			.img-box {
+				width: 100%;
+				max-width: 400px;
+				height: 180px;
+			}
+			
+			ul {
+				margin-top: $base * 1.5;
+				
+				li {
+					margin-bottom: $base;
+					
+					address {
+						padding-top: $base * .2;
+					}
+				}
+			}
+		}
+		
+		.contact-form {
+			padding-top: $base * 2;
+			padding-bottom: $base * 3;
+			
+			.contact-space {
+				max-width: 400px;
+				margin: $base auto 0;
+				
+				form {
+					table {
+						tbody tr {
+							th {
+								width: 100px;
+								height: 36px;
+								padding-top: 10px;
+								
+								label {
+									width: calc(100% - 15px);
+									margin-right: 15px;
+								}
+							}
+							
+							td {
+								width: calc(100% - 100px);
+								
+								.errorlist {
+									margin-top: 20px;
+								}
+								
+								label, input {
+									padding: 10px 0;
+								}
+								
+								&.submit {
+									input[type='submit'] {
+										margin-top: $base * .75;
+										width: 120px;
+									}
+									
+									&:before {
+										width: 120px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Large
+@media screen and (min-width : $desktop) {
+	body#contact {
+		.contact.means {
+			.img-box {
+				width: 90%;
+				max-width: 900px;
+				height: 500px;
+			}
+			
+			ul {
+				margin-top: $base * 3;
+				@include flex();
+				
+				li {
+					width: 31.479%;
+					
+					p {
+						margin-bottom: $base;
+					}
+				}
+			}
+		}
+		
+		.contact-form {
+			padding-top: $base * 5;
+			padding-bottom: $base * 4;
+			
+			.contact-space {
+				width: 91.436%;
+				max-width: 1160px;
+				margin: $base*2 0 $base*2 8.564%;
+				
+				form {
+					table {
+						tbody tr {
+							th {
+								width: 184px;
+								height: 38px;
+								padding-top: $base;
+								
+								label {
+									width: calc(100% - 30px);
+									margin-right: 30px;
+								}
+							}
+							
+							td {
+								width: calc(100% - 184px);
+								
+								.errorlist {
+									margin-top: 20px;
+								}
+								
+								label, input {
+									padding: 10px 0;
+								}
+								
+								&.submit {
+									input[type='submit'] {
+										margin-top: $base;
+										width: 200px;
+									}
+									
+									&:before {
+										width: 200px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

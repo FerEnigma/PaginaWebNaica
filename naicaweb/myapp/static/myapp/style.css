@@ -1,0 +1,1257 @@
+/* ---------------------------------------------- */
+/* --------------------CONTENTS------------------ */
+/* ---------------------------------------------- */
+/*
+	1) Recall frameworks
+	2) Mixins
+	3) Colors, fonts & setup
+	4) Font styles
+	5) General styles
+	6) Animations
+	7) Section styles
+*/
+/* ---------------------------------------------- */
+/* -----------------1) RECALL FRAMEWORKS--------- */
+/* ---------------------------------------------- */
+/*
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td textarea, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+a {
+  text-decoration: none; }
+
+ol, ul {
+  list-style: none; }
+
+img {
+  display: block; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ---------------------------------------------- */
+/* -----------------2) MIXINS-------------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* -----------------3) COLORS, FONTS & SETUP----- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* -----------------4) FONT STYLES--------------- */
+/* ---------------------------------------------- */
+/* ---------------------------------------------- */
+/* -----------------5) GENERAL STYLES------------ */
+/* ---------------------------------------------- */
+* {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff; }
+
+body, html {
+  overflow-x: hidden;
+  margin: 0; }
+
+body {
+  background-color: #000000; }
+  body .wrap {
+    width: calc(100% - 40px);
+    max-width: 1400px;
+    padding: 0 20px;
+    margin-left: auto !important;
+    margin-right: auto !important; }
+  body strong, body b, body .b {
+    font-weight: 700; }
+  body .sc, body header.navigation-bar .wrap nav.site-content a {
+    text-transform: uppercase; }
+  body .title-xl {
+    font-weight: 200; }
+    @media screen and (max-width: 1023px) {
+      body .title-xl {
+        font-size: 30px;
+        line-height: 42px; } }
+    @media screen and (min-width: 1024px) {
+      body .title-xl {
+        font-size: 100px;
+        line-height: 112px; } }
+  body .title-m {
+    font-weight: 700; }
+    @media screen and (max-width: 1023px) {
+      body .title-m {
+        font-size: 16px;
+        line-height: 26px; } }
+    @media screen and (min-width: 1024px) {
+      body .title-m {
+        font-size: 18px;
+        line-height: 28px; } }
+  body h1, body .title-l {
+    font-weight: 100; }
+    @media screen and (max-width: 1023px) {
+      body h1, body .title-l {
+        font-size: 30px;
+        line-height: 42px; } }
+    @media screen and (min-width: 1024px) {
+      body h1, body .title-l {
+        font-size: 50px;
+        line-height: 90px; } }
+  body h2, body h3 {
+    font-weight: 300; }
+    @media screen and (max-width: 1023px) {
+      body h2, body h3 {
+        font-size: 20px;
+        line-height: 28px; } }
+    @media screen and (min-width: 1024px) {
+      body h2, body h3 {
+        font-size: 30px;
+        line-height: 38px; } }
+  body h4, body address {
+    font-weight: 400; }
+    @media screen and (max-width: 1023px) {
+      body h4, body address {
+        font-size: 14px;
+        line-height: 24px; } }
+    @media screen and (min-width: 1024px) {
+      body h4, body address {
+        font-size: 15px;
+        line-height: 28px; } }
+  body address {
+    font-style: normal;
+    font-weight: 300; }
+  body p, body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td textarea {
+    font-weight: 300; }
+    @media screen and (max-width: 1023px) {
+      body p, body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td textarea {
+        font-size: 16px;
+        line-height: 26px; } }
+    @media screen and (min-width: 1024px) {
+      body p, body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td textarea {
+        font-size: 20px;
+        line-height: 28px; } }
+    body p.p-xl, body#contact .contact-form form table tbody tr th label.p-xl, body#contact .contact-form form table tbody tr td .errorlist li.p-xl, body#contact .contact-form form table tbody tr td label.p-xl, body#contact .contact-form form table tbody tr td input.p-xl, body#contact .contact-form form table tbody tr td textarea.p-xl {
+      font-weight: 300; }
+      @media screen and (max-width: 1023px) {
+        body p.p-xl, body#contact .contact-form form table tbody tr th label.p-xl, body#contact .contact-form form table tbody tr td .errorlist li.p-xl, body#contact .contact-form form table tbody tr td label.p-xl, body#contact .contact-form form table tbody tr td input.p-xl, body#contact .contact-form form table tbody tr td textarea.p-xl {
+          font-size: 20px;
+          line-height: 28px; } }
+      @media screen and (min-width: 1024px) {
+        body p.p-xl, body#contact .contact-form form table tbody tr th label.p-xl, body#contact .contact-form form table tbody tr td .errorlist li.p-xl, body#contact .contact-form form table tbody tr td label.p-xl, body#contact .contact-form form table tbody tr td input.p-xl, body#contact .contact-form form table tbody tr td textarea.p-xl {
+          font-size: 30px;
+          line-height: 38px; } }
+    body p.p-sm, body#contact .contact-form form table tbody tr th label.p-sm, body#contact .contact-form form table tbody tr td .errorlist li.p-sm, body#contact .contact-form form table tbody tr td label.p-sm, body#contact .contact-form form table tbody tr td input.p-sm, body#contact .contact-form form table tbody tr td textarea.p-sm, body p.sm, body#contact .contact-form form table tbody tr th label.sm, body#contact .contact-form form table tbody tr td .errorlist li.sm, body#contact .contact-form form table tbody tr td label.sm, body#contact .contact-form form table tbody tr td input.sm, body#contact .contact-form form table tbody tr td textarea.sm {
+      font-weight: 300; }
+      @media screen and (max-width: 1023px) {
+        body p.p-sm, body#contact .contact-form form table tbody tr th label.p-sm, body#contact .contact-form form table tbody tr td .errorlist li.p-sm, body#contact .contact-form form table tbody tr td label.p-sm, body#contact .contact-form form table tbody tr td input.p-sm, body#contact .contact-form form table tbody tr td textarea.p-sm, body p.sm, body#contact .contact-form form table tbody tr th label.sm, body#contact .contact-form form table tbody tr td .errorlist li.sm, body#contact .contact-form form table tbody tr td label.sm, body#contact .contact-form form table tbody tr td input.sm, body#contact .contact-form form table tbody tr td textarea.sm {
+          font-size: 14px;
+          line-height: 24px; } }
+      @media screen and (min-width: 1024px) {
+        body p.p-sm, body#contact .contact-form form table tbody tr th label.p-sm, body#contact .contact-form form table tbody tr td .errorlist li.p-sm, body#contact .contact-form form table tbody tr td label.p-sm, body#contact .contact-form form table tbody tr td input.p-sm, body#contact .contact-form form table tbody tr td textarea.p-sm, body p.sm, body#contact .contact-form form table tbody tr th label.sm, body#contact .contact-form form table tbody tr td .errorlist li.sm, body#contact .contact-form form table tbody tr td label.sm, body#contact .contact-form form table tbody tr td input.sm, body#contact .contact-form form table tbody tr td textarea.sm {
+          font-size: 15px;
+          line-height: 28px; } }
+  body a {
+    font-weight: 400; }
+    @media screen and (max-width: 1023px) {
+      body a {
+        font-size: 14px;
+        line-height: 24px; } }
+    @media screen and (min-width: 1024px) {
+      body a {
+        font-size: 15px;
+        line-height: 28px; } }
+    body a.cta {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: block;
+      position: relative;
+      cursor: pointer; }
+      body a.cta:before {
+        background: black;
+        background: linear-gradient(90deg, black 0%, #97d1c2 50%, black 100%);
+        content: "";
+        width: 100%;
+        height: 2px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0; }
+      body a.cta.side:before {
+        background: black;
+        background: linear-gradient(90deg, #97d1c2 50%, black 100%); }
+      body a.cta.side:hover:before {
+        background: black;
+        background: linear-gradient(90deg, #4e51fb 50%, black 100%);
+        color: #8651FB; }
+      body a.cta.alt:before {
+        background: black;
+        background: linear-gradient(90deg, white 50%, #8651fb 100%); }
+      body a.cta.alt:hover:before {
+        background: black;
+        background: linear-gradient(-90deg, white 50%, #8651fb 100%); }
+      body a.cta:hover:before {
+        background: black;
+        background: linear-gradient(90deg, black 0%, #4e51fb 50%, black 100%);
+        color: #8651FB; }
+  body .transitionable {
+    position: relative;
+    transition: all 0.75s ease-in-out; }
+    body .transitionable.hidden {
+      opacity: 0; }
+    body .transitionable.show {
+      opacity: 1;
+      bottom: 0; }
+  body header.navigation-bar {
+    width: 100%;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    z-index: 10; }
+    body header.navigation-bar .wrap a.brand {
+      display: block; }
+      body header.navigation-bar .wrap a.brand img {
+        width: 100%; }
+    body header.navigation-bar .wrap nav.site-content a {
+      letter-spacing: 1px; }
+    body header.navigation-bar .wrap nav.site-content ul.lang-select li.active a, body header.navigation-bar .wrap nav.site-content ul.lang-select li:hover a {
+      text-decoration: underline; }
+  body .swiper {
+    position: relative; }
+    body .swiper .btn-next, body .swiper .btn-prev {
+      background-image: url("img/icons/gui/arrow.png");
+      background-position: center center;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      cursor: pointer;
+      z-index: 3; }
+    body .swiper .btn-next {
+      right: 0;
+      -webkit-transform: rotate(180deg);
+      /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+      -ms-transform: rotate(180deg);
+      /* IE 9 */
+      transform: rotate(180deg);
+      /* IE 10, Fx 16+, Op 12.1+ */ }
+    body .swiper .btn-prev {
+      left: 0; }
+  body section.cta-box {
+    background-color: #8651FB; }
+  body#legals .contents h1 {
+    text-align: center; }
+  body footer .wrap a {
+    font-weight: 300; }
+  body footer .wrap nav a {
+    text-decoration: underline; }
+  body footer .wrap .credits {
+    font-weight: 300; }
+    @media screen and (max-width: 1023px) {
+      body footer .wrap .credits {
+        font-size: 14px;
+        line-height: 24px; } }
+    @media screen and (min-width: 1024px) {
+      body footer .wrap .credits {
+        font-size: 15px;
+        line-height: 28px; } }
+  body .img-cont {
+    overflow: hidden; }
+    body .img-cont img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+
+@media screen and (max-width: 1023px) {
+  body {
+    padding-top: 90px;
+    overflow-x: hidden;
+    position: relative;
+    right: 0;
+    transition: right 0.5s; }
+    body.pushed {
+      right: 260px; }
+    body .wrap {
+      max-width: 600px; }
+    body a.cta {
+      padding-bottom: 6px; }
+    body .transitionable.hidden {
+      bottom: -56px; }
+    body header.navigation-bar .wrap {
+      padding: 10px 0 20px 0;
+      position: relative; }
+      body header.navigation-bar .wrap > a.brand {
+        width: 200px;
+        height: 60px; }
+        body header.navigation-bar .wrap > a.brand img {
+          width: auto;
+          height: 100%; }
+      body header.navigation-bar .wrap .mobile-menu {
+        width: 30px;
+        position: absolute;
+        top: 30px;
+        right: 10px; }
+        body header.navigation-bar .wrap .mobile-menu span {
+          width: 100%;
+          display: block; }
+          body header.navigation-bar .wrap .mobile-menu span img {
+            width: 100%; }
+      body header.navigation-bar .wrap nav.site-content {
+        background: #000000;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        overflow-x: hidden;
+        transition: width 0.5s; }
+        body header.navigation-bar .wrap nav.site-content > div, body header.navigation-bar .wrap nav.site-content ul {
+          width: 200px;
+          margin: 0 30px; }
+        body header.navigation-bar .wrap nav.site-content div.mobile-close {
+          width: 200px;
+          margin-top: 30px;
+          text-align: right;
+          display: block; }
+          body header.navigation-bar .wrap nav.site-content div.mobile-close img {
+            width: 30px;
+            display: inline-block; }
+        body header.navigation-bar .wrap nav.site-content a.brand {
+          width: 80px;
+          margin: 30px; }
+        body header.navigation-bar .wrap nav.site-content ul li {
+          margin-bottom: 8px;
+          color: #ffffff; }
+          body header.navigation-bar .wrap nav.site-content ul li a {
+            padding: 4px 0;
+            display: block; }
+        body header.navigation-bar .wrap nav.site-content ul.main {
+          border-top: solid 1px #ffffff;
+          padding-top: 28px; }
+        body header.navigation-bar .wrap nav.site-content ul.lang-select {
+          padding-top: 14px; }
+          body header.navigation-bar .wrap nav.site-content ul.lang-select li {
+            display: inline-block; }
+            body header.navigation-bar .wrap nav.site-content ul.lang-select li:first-child {
+              border-right: 1px solid #ffffff;
+              padding-right: 12px; }
+            body header.navigation-bar .wrap nav.site-content ul.lang-select li:last-child {
+              padding-left: 12px; }
+        body header.navigation-bar .wrap nav.site-content.open {
+          width: 260px;
+          max-width: 100%; }
+    body .swiper .btn-prev, body .swiper .btn-next {
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 30px;
+      height: 50px; }
+    body .swiper .swiper-button-disabled {
+      display: none; }
+    body section.cta-box {
+      padding-bottom: 56px; }
+      body section.cta-box .wrap {
+        width: 100%;
+        padding: 0; }
+        body section.cta-box .wrap .text-space {
+          margin: 28px 20px 0; }
+          body section.cta-box .wrap .text-space h2 {
+            margin-bottom: 5.6px; }
+          body section.cta-box .wrap .text-space p, body#contact section.cta-box .wrap .text-space .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th section.cta-box .wrap .text-space label, body#contact section.cta-box .wrap .text-space .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist section.cta-box .wrap .text-space li, body#contact section.cta-box .wrap .text-space .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td section.cta-box .wrap .text-space label, body#contact section.cta-box .wrap .text-space .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td section.cta-box .wrap .text-space input, body#contact section.cta-box .wrap .text-space .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td section.cta-box .wrap .text-space textarea {
+            max-width: 400px;
+            margin-bottom: 28px; }
+          body section.cta-box .wrap .text-space a.cta {
+            width: 210px; }
+    body#legals .legals {
+      padding-top: 7px;
+      padding-bottom: 35px; }
+      body#legals .legals .contents p, body#legals .legals .contents body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#legals .legals .contents label, body#legals .legals .contents body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#legals .legals .contents li, body#legals .legals .contents body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#legals .legals .contents label, body#legals .legals .contents body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#legals .legals .contents input, body#legals .legals .contents body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#legals .legals .contents textarea {
+        margin-bottom: 20px; }
+    body footer {
+      border-top: 1px solid #ffffff;
+      padding: 42px 0 56px; }
+      body footer .wrap .brand {
+        width: 100px; }
+      body footer .wrap .sns {
+        width: 100%;
+        margin-top: 42px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex; }
+        body footer .wrap .sns li {
+          margin-right: 20px; }
+      body footer .wrap nav, body footer .wrap .credits {
+        margin-top: 28px; }
+      body footer .wrap nav a {
+        margin-right: 20px; }
+      body footer .wrap .credits {
+        display: block; } }
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding-top: 120px; }
+    body a.cta {
+      padding-bottom: 10px; }
+    body .transitionable.hidden {
+      bottom: -56px; }
+    body header.navigation-bar {
+      padding-top: 28px;
+      padding-bottom: 21px;
+      left: 0;
+      transition: top 0.3s ease-in-out;
+      box-sizing: border-box; }
+      body header.navigation-bar .wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        body header.navigation-bar .wrap .mobile-menu {
+          display: none; }
+        body header.navigation-bar .wrap a.brand {
+          width: 228px; }
+        body header.navigation-bar .wrap nav.site-content {
+          overflow: auto; }
+          body header.navigation-bar .wrap nav.site-content div.mobile-close,
+          body header.navigation-bar .wrap nav.site-content a.brand {
+            display: none; }
+          body header.navigation-bar .wrap nav.site-content ul li {
+            display: inline-block; }
+          body header.navigation-bar .wrap nav.site-content ul.main {
+            float: left; }
+            body header.navigation-bar .wrap nav.site-content ul.main li {
+              margin-right: 40px; }
+          body header.navigation-bar .wrap nav.site-content ul.lang-select {
+            margin-left: 40px;
+            float: right; }
+            body header.navigation-bar .wrap nav.site-content ul.lang-select li:first-child {
+              margin-right: 10px; }
+      body header.navigation-bar.up {
+        top: -120px; }
+    body .swiper .btn-prev, body .swiper .btn-next {
+      width: 34px;
+      height: 65px; }
+    body section.cta-box .wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      body section.cta-box .wrap .img-cont {
+        width: calc(48.828% + 20px);
+        height: 400px;
+        margin-left: -20px; }
+      body section.cta-box .wrap .text-space {
+        width: 42%; }
+        body section.cta-box .wrap .text-space h2 {
+          width: 420px;
+          margin-bottom: 14px;
+          line-height: 42px;
+          font-weight: 700; }
+        body section.cta-box .wrap .text-space p, body#contact section.cta-box .wrap .text-space .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th section.cta-box .wrap .text-space label, body#contact section.cta-box .wrap .text-space .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist section.cta-box .wrap .text-space li, body#contact section.cta-box .wrap .text-space .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td section.cta-box .wrap .text-space label, body#contact section.cta-box .wrap .text-space .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td section.cta-box .wrap .text-space input, body#contact section.cta-box .wrap .text-space .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td section.cta-box .wrap .text-space textarea {
+          width: 340px;
+          margin-bottom: 70px; }
+        body section.cta-box .wrap .text-space a.cta {
+          width: 210px; }
+    body#legals .contents {
+      padding-top: 84px;
+      max-width: 1080px;
+      min-height: 800px;
+      margin: 0 auto; }
+      body#legals .contents p, body#legals .contents body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#legals .contents label, body#legals .contents body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#legals .contents li, body#legals .contents body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#legals .contents label, body#legals .contents body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#legals .contents input, body#legals .contents body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#legals .contents textarea {
+        margin-bottom: 30px; }
+    body footer {
+      padding: 56px 0 84px; }
+      body footer .wrap {
+        overflow: auto; }
+        body footer .wrap .brand {
+          float: left; }
+        body footer .wrap .sns {
+          margin-top: 112px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          float: right; }
+          body footer .wrap .sns li {
+            margin-left: 20px; }
+        body footer .wrap nav, body footer .wrap .credits {
+          margin-top: 42px; }
+        body footer .wrap nav {
+          float: right;
+          clear: right; }
+          body footer .wrap nav a {
+            margin-left: 80px; }
+            body footer .wrap nav a:first-child {
+              margin-left: 0; }
+        body footer .wrap .credits {
+          float: left;
+          clear: left; } }
+
+/* ---------------------------------------------- */
+/* -----------------6) ANIMATIONS---------------- */
+/* ---------------------------------------------- */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7); }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px transparent; }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 transparent; } }
+
+@keyframes afeFadeInOut {
+  0% {
+    opacity: 1; }
+  45% {
+    opacity: 1; }
+  55% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes cfeFadeInOut {
+  0% {
+    opacity: 1; }
+  22% {
+    opacity: 1; }
+  33% {
+    opacity: 0; }
+  88% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/* ---------------------------------------------- */
+/* -----------------7) SECTION STYLES------------ */
+/* ---------------------------------------------- */
+body#index .intro .wrap img {
+  width: 100%; }
+
+body#index .intro .wrap h1, body#index .intro .wrap p, body#index .intro .wrap body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#index .intro .wrap label, body#index .intro .wrap body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#index .intro .wrap li, body#index .intro .wrap body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#index .intro .wrap label, body#index .intro .wrap body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#index .intro .wrap input, body#index .intro .wrap body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#index .intro .wrap textarea {
+  position: relative; }
+
+body#index .intro .wrap h1 {
+  margin: 0 auto; }
+  body#index .intro .wrap h1 span {
+    display: block; }
+    body#index .intro .wrap h1 span:first-child {
+      text-align: left; }
+    body#index .intro .wrap h1 span:last-child {
+      text-align: right; }
+
+body#index .intro .wrap p.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr th label.p-xl, body#contact .contact-form form table tbody tr th body#index .intro .wrap label.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td .errorlist li.p-xl, body#contact .contact-form form table tbody tr td .errorlist body#index .intro .wrap li.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td label.p-xl, body#contact .contact-form form table tbody tr td body#index .intro .wrap label.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td input.p-xl, body#contact .contact-form form table tbody tr td body#index .intro .wrap input.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td textarea.p-xl, body#contact .contact-form form table tbody tr td body#index .intro .wrap textarea.p-xl, body#index .intro .wrap h2, body#index .intro .wrap p, body#index .intro .wrap body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#index .intro .wrap label, body#index .intro .wrap body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#index .intro .wrap li, body#index .intro .wrap body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#index .intro .wrap label, body#index .intro .wrap body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#index .intro .wrap input, body#index .intro .wrap body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#index .intro .wrap textarea {
+  margin: 0 auto;
+  text-align: center; }
+
+body#index .intro .wrap .video-space {
+  margin: 0 auto; }
+  body#index .intro .wrap .video-space video {
+    width: 100%;
+    margin: 0 auto;
+    display: block; }
+
+body#index .intro .wrap a.cta {
+  margin: 0 auto;
+  text-align: center; }
+
+body#index .alliances .title {
+  position: relative; }
+  body#index .alliances .title img {
+    position: absolute; }
+
+body#index .alliances .wrap .swiper:before, body#index .alliances .wrap .swiper:after {
+  z-index: 2; }
+
+body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide img {
+  margin: 0 auto;
+  display: block; }
+
+body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide p, body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide label, body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide li, body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide label, body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide input, body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide textarea {
+  text-align: center; }
+
+@media screen and (max-width: 1023px) {
+  body#index .intro .wrap h1 {
+    max-width: 320px;
+    letter-spacing: 4px; }
+  body#index .intro .wrap p.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr th label.p-xl, body#contact .contact-form form table tbody tr th body#index .intro .wrap label.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td .errorlist li.p-xl, body#contact .contact-form form table tbody tr td .errorlist body#index .intro .wrap li.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td label.p-xl, body#contact .contact-form form table tbody tr td body#index .intro .wrap label.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td input.p-xl, body#contact .contact-form form table tbody tr td body#index .intro .wrap input.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td textarea.p-xl, body#contact .contact-form form table tbody tr td body#index .intro .wrap textarea.p-xl {
+    max-width: 480px;
+    margin-top: 21px; }
+  body#index .intro .wrap h2 {
+    max-width: 420px;
+    margin-top: 42px; }
+  body#index .intro .wrap p, body#index .intro .wrap body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#index .intro .wrap label, body#index .intro .wrap body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#index .intro .wrap li, body#index .intro .wrap body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#index .intro .wrap label, body#index .intro .wrap body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#index .intro .wrap input, body#index .intro .wrap body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#index .intro .wrap textarea {
+    max-width: 520px;
+    margin-top: 14px; }
+  body#index .intro .wrap .video-space {
+    width: 100%;
+    margin-top: 28px; }
+  body#index .intro .wrap a.cta {
+    width: 260px;
+    margin: 28px auto; }
+  body#index .alliances {
+    padding-top: 112px;
+    padding-bottom: 84px; }
+    body#index .alliances .wrap .title h2 {
+      max-width: 280px;
+      margin-left: 10%; }
+    body#index .alliances .wrap .title img {
+      width: 200px;
+      position: absolute;
+      top: -120px;
+      left: calc(240px + 10%); }
+    body#index .alliances .wrap .swiper {
+      background-color: #000000;
+      width: 220px;
+      padding: 0 30px;
+      margin: 56px auto 0; }
+      body#index .alliances .wrap .swiper:before, body#index .alliances .wrap .swiper:after {
+        content: "";
+        background-color: #000000;
+        width: 30px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: block; }
+      body#index .alliances .wrap .swiper:before {
+        left: 0; }
+      body#index .alliances .wrap .swiper:after {
+        right: 0; }
+    body#index .alliances .wrap .text-space {
+      margin-top: 56px; }
+      body#index .alliances .wrap .text-space p, body#index .alliances .wrap .text-space body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#index .alliances .wrap .text-space label, body#index .alliances .wrap .text-space body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#index .alliances .wrap .text-space li, body#index .alliances .wrap .text-space body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#index .alliances .wrap .text-space label, body#index .alliances .wrap .text-space body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#index .alliances .wrap .text-space input, body#index .alliances .wrap .text-space body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#index .alliances .wrap .text-space textarea {
+        margin: 0 10%; }
+      body#index .alliances .wrap .text-space a.cta {
+        width: 90%;
+        max-width: 240px;
+        margin: 28px 10%; } }
+
+@media screen and (min-width: 1024px) {
+  body#index .intro .wrap img {
+    padding-top: 28px; }
+  body#index .intro .wrap h1 {
+    width: 65.7407%;
+    max-width: 720px;
+    margin-top: -300px;
+    letter-spacing: 10px; }
+    body#index .intro .wrap h1 span {
+      line-height: 56px; }
+  body#index .intro .wrap p.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr th label.p-xl, body#contact .contact-form form table tbody tr th body#index .intro .wrap label.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td .errorlist li.p-xl, body#contact .contact-form form table tbody tr td .errorlist body#index .intro .wrap li.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td label.p-xl, body#contact .contact-form form table tbody tr td body#index .intro .wrap label.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td input.p-xl, body#contact .contact-form form table tbody tr td body#index .intro .wrap input.p-xl, body#index .intro .wrap body#contact .contact-form form table tbody tr td textarea.p-xl, body#contact .contact-form form table tbody tr td body#index .intro .wrap textarea.p-xl {
+    width: 65.7407%;
+    max-width: 780px;
+    margin-top: 56px;
+    line-height: 56px; }
+  body#index .intro .wrap h2 {
+    width: 45.597%;
+    max-width: 492px;
+    margin-top: 140px;
+    line-height: 42px; }
+  body#index .intro .wrap p, body#index .intro .wrap body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#index .intro .wrap label, body#index .intro .wrap body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#index .intro .wrap li, body#index .intro .wrap body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#index .intro .wrap label, body#index .intro .wrap body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#index .intro .wrap input, body#index .intro .wrap body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#index .intro .wrap textarea {
+    width: 65.735%;
+    margin-top: 42px; }
+  body#index .intro .wrap .video-space {
+    width: 82.9629%;
+    max-width: 980px;
+    margin: 140px auto; }
+  body#index .intro .wrap a.cta {
+    width: 320px;
+    margin-top: 56px; }
+  body#index .alliances .wrap {
+    padding-bottom: 224px; }
+    body#index .alliances .wrap .title {
+      padding-top: 140px; }
+      body#index .alliances .wrap .title img {
+        position: absolute;
+        top: 30px;
+        left: calc(8.564% + 800px); }
+    body#index .alliances .wrap h2 {
+      width: 82%;
+      max-width: 860px;
+      margin-left: 8.564%; }
+    body#index .alliances .wrap .swiper {
+      width: 82.863%;
+      margin-top: 168px;
+      padding: 0 8.5685%; }
+      body#index .alliances .wrap .swiper:before, body#index .alliances .wrap .swiper:after {
+        content: "";
+        background-color: #000000;
+        width: 8.5685%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: block; }
+      body#index .alliances .wrap .swiper:before {
+        left: 0; }
+      body#index .alliances .wrap .swiper:after {
+        right: 0; }
+      body#index .alliances .wrap .swiper .swiper-wrapper .swiper-slide img {
+        width: 100%;
+        max-width: 200px; }
+      body#index .alliances .wrap .swiper .btn-next {
+        right: 1.6%; }
+      body#index .alliances .wrap .swiper .btn-prev {
+        left: 1.6%; }
+    body#index .alliances .wrap .text-space {
+      margin-top: 56px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; }
+      body#index .alliances .wrap .text-space p, body#index .alliances .wrap .text-space body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#index .alliances .wrap .text-space label, body#index .alliances .wrap .text-space body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#index .alliances .wrap .text-space li, body#index .alliances .wrap .text-space body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#index .alliances .wrap .text-space label, body#index .alliances .wrap .text-space body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#index .alliances .wrap .text-space input, body#index .alliances .wrap .text-space body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#index .alliances .wrap .text-space textarea {
+        width: 65.735%;
+        max-width: 750px;
+        margin-left: 8.564%; }
+      body#index .alliances .wrap .text-space a.cta {
+        width: 22.915%;
+        height: 28px;
+        margin-left: 2.777%; } }
+
+body#about .intro .wrap {
+  position: relative; }
+  body#about .intro .wrap .img-box img:first-of-type {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1; }
+
+@media screen and (max-width: 1023px) {
+  body#about .what-we-do .wrap h2 {
+    font-size: 30px;
+    line-height: 42px; } }
+
+@media screen and (min-width: 1024px) {
+  body#about .what-we-do .wrap h2 {
+    font-size: 55px;
+    line-height: 82px; } }
+
+body#about .what-we-do .wrap h2 span {
+  position: relative; }
+  body#about .what-we-do .wrap h2 span.hl.alt:before {
+    background: black;
+    background: linear-gradient(90deg, #e1e1e1 50%, black 100%);
+    width: 120%; }
+
+body#about .what-we-do .wrap div h4, body#about .what-we-do .wrap div li {
+  color: #8651FB; }
+
+body#about .what-we-do .wrap div h4 {
+  font-weight: 700; }
+
+body#about .what-we-do .wrap div li {
+  font-weight: 300; }
+  @media screen and (max-width: 1023px) {
+    body#about .what-we-do .wrap div li {
+      font-size: 14px;
+      line-height: 24px; } }
+  @media screen and (min-width: 1024px) {
+    body#about .what-we-do .wrap div li {
+      font-size: 15px;
+      line-height: 28px; } }
+
+body#about .investment-sectors {
+  background-color: #4E51FB; }
+  body#about .investment-sectors .wrap h2 {
+    text-align: center;
+    margin: 0 auto; }
+  body#about .investment-sectors .wrap ul li img {
+    width: 92px; }
+  body#about .investment-sectors .wrap ul li h4, body#about .investment-sectors .wrap ul li p, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .investment-sectors .wrap ul li label, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .investment-sectors .wrap ul li li, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li label, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li input, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li textarea {
+    text-align: center; }
+  body#about .investment-sectors .wrap ul li h4 {
+    font-weight: 700; }
+  body#about .investment-sectors .wrap ul li p, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .investment-sectors .wrap ul li label, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .investment-sectors .wrap ul li li, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li label, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li input, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li textarea {
+    margin: 0 auto; }
+  body#about .investment-sectors .wrap > h4 {
+    font-weight: 300;
+    text-align: center;
+    margin: 0 auto; }
+
+body#about .alliances .wrap .text-box {
+  position: relative; }
+  body#about .alliances .wrap .text-box img {
+    position: absolute;
+    z-index: -1; }
+
+body#about .alliances .wrap h2, body#about .alliances .wrap h3, body#about .alliances .wrap h4, body#about .alliances .wrap p, body#about .alliances .wrap body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .alliances .wrap label, body#about .alliances .wrap body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .alliances .wrap li, body#about .alliances .wrap body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .alliances .wrap label, body#about .alliances .wrap body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .alliances .wrap input, body#about .alliances .wrap body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .alliances .wrap textarea {
+  margin: 0 auto;
+  text-align: center; }
+
+body#about .alliances .wrap h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+body#about .alliances .wrap ul {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  body#about .alliances .wrap ul li img {
+    margin: 0 auto; }
+
+body#about .testimonials .wrap h2 {
+  text-align: center; }
+  @media screen and (max-width: 1023px) {
+    body#about .testimonials .wrap h2 {
+      font-size: 30px;
+      line-height: 42px; } }
+  @media screen and (min-width: 1024px) {
+    body#about .testimonials .wrap h2 {
+      font-size: 55px;
+      line-height: 62px; } }
+
+body#about .testimonials .wrap > p, body#about .testimonials body#contact .contact-form form table tbody tr th .wrap > label, body#contact .contact-form form table tbody tr th body#about .testimonials .wrap > label, body#about .testimonials body#contact .contact-form form table tbody tr td .errorlist .wrap > li, body#contact .contact-form form table tbody tr td .errorlist body#about .testimonials .wrap > li, body#about .testimonials body#contact .contact-form form table tbody tr td .wrap > label, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap > label, body#about .testimonials body#contact .contact-form form table tbody tr td .wrap > input, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap > input, body#about .testimonials body#contact .contact-form form table tbody tr td .wrap > textarea, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap > textarea {
+  text-align: center; }
+
+body#about .testimonials .wrap p, body#about .testimonials .wrap body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .testimonials .wrap label, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .testimonials .wrap li, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap label, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap input, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap textarea {
+  margin: 0 auto; }
+  body#about .testimonials .wrap p.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr th label.author, body#contact .contact-form form table tbody tr th body#about .testimonials .wrap label.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td .errorlist li.author, body#contact .contact-form form table tbody tr td .errorlist body#about .testimonials .wrap li.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td label.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap label.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td input.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap input.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td textarea.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap textarea.author {
+    font-weight: 400; }
+    @media screen and (max-width: 1023px) {
+      body#about .testimonials .wrap p.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr th label.author, body#contact .contact-form form table tbody tr th body#about .testimonials .wrap label.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td .errorlist li.author, body#contact .contact-form form table tbody tr td .errorlist body#about .testimonials .wrap li.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td label.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap label.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td input.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap input.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td textarea.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap textarea.author {
+        font-size: 14px;
+        line-height: 24px; } }
+    @media screen and (min-width: 1024px) {
+      body#about .testimonials .wrap p.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr th label.author, body#contact .contact-form form table tbody tr th body#about .testimonials .wrap label.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td .errorlist li.author, body#contact .contact-form form table tbody tr td .errorlist body#about .testimonials .wrap li.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td label.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap label.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td input.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap input.author, body#about .testimonials .wrap body#contact .contact-form form table tbody tr td textarea.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap textarea.author {
+        font-size: 15px;
+        line-height: 28px; } }
+
+body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide {
+  opacity: .25; }
+
+body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide-active {
+  opacity: 1; }
+
+body#about .testimonials .wrap .swiper .btn-next, body#about .testimonials .wrap .swiper .btn-prev {
+  background-image: url("img/icons/gui/arrow-alt.png"); }
+
+@media screen and (max-width: 1023px) {
+  body#about p, body#about body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about label, body#about body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about li, body#about body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about label, body#about body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about input, body#about body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about textarea {
+    max-width: 480px; }
+  body#about .intro {
+    padding-bottom: 56px; }
+    body#about .intro .wrap .img-box {
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto; }
+      body#about .intro .wrap .img-box img:first-of-type {
+        width: 56%; }
+      body#about .intro .wrap .img-box img:last-of-type {
+        width: 100%;
+        padding-top: 14px; }
+    body#about .intro .wrap .text-box {
+      margin-top: -84px;
+      position: relative;
+      z-index: 2; }
+      body#about .intro .wrap .text-box h1 {
+        max-width: 350px; }
+        body#about .intro .wrap .text-box h1 br {
+          display: none; }
+      body#about .intro .wrap .text-box p, body#about .intro .wrap .text-box body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .intro .wrap .text-box label, body#about .intro .wrap .text-box body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .intro .wrap .text-box li, body#about .intro .wrap .text-box body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .intro .wrap .text-box label, body#about .intro .wrap .text-box body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .intro .wrap .text-box input, body#about .intro .wrap .text-box body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .intro .wrap .text-box textarea {
+        margin-top: 14px; }
+  body#about .what-we-do {
+    padding-bottom: 70px; }
+    body#about .what-we-do .wrap h2 {
+      max-width: 480px; }
+      body#about .what-we-do .wrap h2 span {
+        color: #4E51FB; }
+    body#about .what-we-do .wrap p, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .what-we-do .wrap label, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .what-we-do .wrap li, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .what-we-do .wrap label, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .what-we-do .wrap input, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .what-we-do .wrap textarea {
+      margin-top: 14px; }
+    body#about .what-we-do .wrap div {
+      margin-top: 28px;
+      margin-left: 5%; }
+  body#about .investment-sectors {
+    padding-top: 56px;
+    padding-bottom: 56px; }
+    body#about .investment-sectors .wrap h2 {
+      max-width: 400px; }
+    body#about .investment-sectors .wrap ul {
+      margin-top: 42px; }
+      body#about .investment-sectors .wrap ul li {
+        margin-bottom: 42px; }
+        body#about .investment-sectors .wrap ul li img {
+          margin: 0 auto 14px; }
+        body#about .investment-sectors .wrap ul li p, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .investment-sectors .wrap ul li label, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .investment-sectors .wrap ul li li, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li label, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li input, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li textarea {
+          max-width: 180px; }
+          body#about .investment-sectors .wrap ul li p br, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr th label br, body#contact .contact-form form table tbody tr th body#about .investment-sectors .wrap ul li label br, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td .errorlist li br, body#contact .contact-form form table tbody tr td .errorlist body#about .investment-sectors .wrap ul li li br, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td label br, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li label br, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td input br, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li input br, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td textarea br, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li textarea br {
+            display: none; }
+    body#about .investment-sectors .wrap > h4 {
+      max-width: 380px; }
+  body#about .about {
+    padding-top: 56px; }
+    body#about .about .wrap h2 {
+      margin-bottom: 14px; }
+    body#about .about .wrap h3 {
+      max-width: 520px; }
+    body#about .about .wrap ul {
+      margin-top: 28px; }
+      body#about .about .wrap ul li {
+        width: 90%;
+        max-width: 370px;
+        margin: 0 auto 28px; }
+  body#about .alliances .wrap {
+    padding-top: 70px; }
+    body#about .alliances .wrap .text-box {
+      width: 280px;
+      margin: 0 auto; }
+      body#about .alliances .wrap .text-box img {
+        width: 120px;
+        top: -56px;
+        left: -10px; }
+    body#about .alliances .wrap h3 {
+      max-width: 440px;
+      margin-top: 28px; }
+    body#about .alliances .wrap h4 {
+      max-width: 400px;
+      margin-top: 42px; }
+    body#about .alliances .wrap ul {
+      margin-top: 28px; }
+      body#about .alliances .wrap ul li {
+        width: 50%;
+        max-width: 200px; }
+        body#about .alliances .wrap ul li img {
+          width: 85%; }
+    body#about .alliances .wrap p, body#about .alliances .wrap body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .alliances .wrap label, body#about .alliances .wrap body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .alliances .wrap li, body#about .alliances .wrap body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .alliances .wrap label, body#about .alliances .wrap body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .alliances .wrap input, body#about .alliances .wrap body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .alliances .wrap textarea {
+      max-width: 380px;
+      margin-top: 28px; }
+  body#about .testimonials {
+    padding-top: 70px;
+    padding-bottom: 84px; }
+    body#about .testimonials .wrap h2 {
+      max-width: 420px;
+      margin: 0 auto; }
+      body#about .testimonials .wrap h2 br {
+        display: none; }
+    body#about .testimonials .wrap > p, body#about .testimonials body#contact .contact-form form table tbody tr th .wrap > label, body#contact .contact-form form table tbody tr th body#about .testimonials .wrap > label, body#about .testimonials body#contact .contact-form form table tbody tr td .errorlist .wrap > li, body#contact .contact-form form table tbody tr td .errorlist body#about .testimonials .wrap > li, body#about .testimonials body#contact .contact-form form table tbody tr td .wrap > label, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap > label, body#about .testimonials body#contact .contact-form form table tbody tr td .wrap > input, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap > input, body#about .testimonials body#contact .contact-form form table tbody tr td .wrap > textarea, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap > textarea {
+      margin-top: 14px;
+      max-width: 380px; }
+    body#about .testimonials .wrap .swiper {
+      width: calc(100% - 60px);
+      max-width: 400px;
+      padding: 0 30px;
+      margin: 42px auto 0; }
+      body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide p, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide label, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide li, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide label, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide input, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide textarea {
+        text-align: center; }
+        body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide p.author, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr th label.author, body#contact .contact-form form table tbody tr th body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide label.author, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td .errorlist li.author, body#contact .contact-form form table tbody tr td .errorlist body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide li.author, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td label.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide label.author, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td input.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide input.author, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td textarea.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide textarea.author {
+          margin-top: 14px; }
+      body#about .testimonials .wrap .swiper .btn-prev, body#about .testimonials .wrap .swiper .btn-next {
+        top: 0;
+        bottom: auto; } }
+
+@media screen and (min-width: 1024px) {
+  body#about .intro .wrap {
+    margin-top: 56px; }
+    body#about .intro .wrap .img-box {
+      width: 560px;
+      margin-left: 53%;
+      right: 0; }
+      body#about .intro .wrap .img-box img:last-of-type {
+        padding-top: 56px; }
+    body#about .intro .wrap .text-box {
+      position: absolute;
+      left: 20px;
+      top: 28px; }
+      body#about .intro .wrap .text-box h1 {
+        width: 664px; }
+      body#about .intro .wrap .text-box p, body#about .intro .wrap .text-box body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .intro .wrap .text-box label, body#about .intro .wrap .text-box body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .intro .wrap .text-box li, body#about .intro .wrap .text-box body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .intro .wrap .text-box label, body#about .intro .wrap .text-box body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .intro .wrap .text-box input, body#about .intro .wrap .text-box body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .intro .wrap .text-box textarea {
+        width: 48.5185%;
+        margin-top: 56px; }
+  body#about .what-we-do {
+    padding-bottom: 140px; }
+    body#about .what-we-do .wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap; }
+      body#about .what-we-do .wrap h1 {
+        width: 100%; }
+      body#about .what-we-do .wrap h2 span {
+        display: inline-block; }
+        body#about .what-we-do .wrap h2 span:before {
+          background: #8651FB;
+          content: "";
+          width: 100%;
+          height: 2px;
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0; }
+      body#about .what-we-do .wrap p, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .what-we-do .wrap label, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .what-we-do .wrap li, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .what-we-do .wrap label, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .what-we-do .wrap input, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .what-we-do .wrap textarea, body#about .what-we-do .wrap div {
+        margin-top: 28px; }
+      body#about .what-we-do .wrap p, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .what-we-do .wrap label, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .what-we-do .wrap li, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .what-we-do .wrap label, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .what-we-do .wrap input, body#about .what-we-do .wrap body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .what-we-do .wrap textarea {
+        width: 48.5185%; }
+      body#about .what-we-do .wrap div {
+        margin-left: 19.905%; }
+  body#about .investment-sectors {
+    padding-top: 56px;
+    padding-bottom: 84px; }
+    body#about .investment-sectors .wrap h2 {
+      width: 520px; }
+    body#about .investment-sectors .wrap ul {
+      margin-top: 42px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: space-between; }
+      body#about .investment-sectors .wrap ul li {
+        width: 22.915%;
+        margin-bottom: 84px; }
+        body#about .investment-sectors .wrap ul li img {
+          margin: 42px auto; }
+        body#about .investment-sectors .wrap ul li p, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .investment-sectors .wrap ul li label, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .investment-sectors .wrap ul li li, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li label, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li input, body#about .investment-sectors .wrap ul li body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .investment-sectors .wrap ul li textarea {
+          width: 200px;
+          line-height: 24px; }
+    body#about .investment-sectors .wrap > h4 {
+      width: 464px; }
+  body#about .about {
+    padding-top: 140px; }
+    body#about .about .wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap; }
+      body#about .about .wrap h2, body#about .about .wrap h3 {
+        margin-left: 8.564%; }
+      body#about .about .wrap h2 {
+        width: 760px;
+        margin-bottom: 84px; }
+      body#about .about .wrap h3 {
+        width: 40%; }
+      body#about .about .wrap ul {
+        width: 31.479%;
+        margin-top: 10px;
+        margin-left: 11.341%; }
+        body#about .about .wrap ul li {
+          margin-bottom: 33.6px; }
+          body#about .about .wrap ul li h4 {
+            margin-bottom: 4px; }
+          body#about .about .wrap ul li p, body#about .about .wrap ul li body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .about .wrap ul li label, body#about .about .wrap ul li body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .about .wrap ul li li, body#about .about .wrap ul li body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .about .wrap ul li label, body#about .about .wrap ul li body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .about .wrap ul li input, body#about .about .wrap ul li body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .about .wrap ul li textarea {
+            max-width: 320px; }
+  body#about .alliances .wrap {
+    padding-top: 168px; }
+    body#about .alliances .wrap .text-box h2 {
+      width: 88.417%; }
+    body#about .alliances .wrap .text-box img {
+      top: -150px;
+      left: 250px; }
+    body#about .alliances .wrap h3 {
+      width: 48.6111%;
+      margin-top: 70px; }
+    body#about .alliances .wrap h4 {
+      margin-top: 84px; }
+    body#about .alliances .wrap ul {
+      width: 82.863%; }
+      body#about .alliances .wrap ul li {
+        width: 25%;
+        margin-bottom: 28px; }
+        body#about .alliances .wrap ul li img {
+          width: 80%;
+          max-width: 200px; }
+    body#about .alliances .wrap p, body#about .alliances .wrap body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .alliances .wrap label, body#about .alliances .wrap body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .alliances .wrap li, body#about .alliances .wrap body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .alliances .wrap label, body#about .alliances .wrap body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .alliances .wrap input, body#about .alliances .wrap body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .alliances .wrap textarea {
+      width: 48.6111%;
+      max-width: 550px;
+      margin-top: 28px; }
+  body#about .testimonials .wrap {
+    padding-top: 280px;
+    padding-bottom: 140px; }
+    body#about .testimonials .wrap h2 {
+      margin-bottom: 56px; }
+    body#about .testimonials .wrap > p, body#about .testimonials body#contact .contact-form form table tbody tr th .wrap > label, body#contact .contact-form form table tbody tr th body#about .testimonials .wrap > label, body#about .testimonials body#contact .contact-form form table tbody tr td .errorlist .wrap > li, body#contact .contact-form form table tbody tr td .errorlist body#about .testimonials .wrap > li, body#about .testimonials body#contact .contact-form form table tbody tr td .wrap > label, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap > label, body#about .testimonials body#contact .contact-form form table tbody tr td .wrap > input, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap > input, body#about .testimonials body#contact .contact-form form table tbody tr td .wrap > textarea, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap > textarea {
+      width: 400px; }
+    body#about .testimonials .wrap .swiper {
+      width: 48.607%;
+      margin-top: 112px;
+      overflow: visible; }
+      body#about .testimonials .wrap .swiper .swiper-wrapper {
+        overflow: visible; }
+        body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide p, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide label, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide li, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide label, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide input, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide textarea {
+          width: 80%; }
+          body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide p.author, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr th label.author, body#contact .contact-form form table tbody tr th body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide label.author, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td .errorlist li.author, body#contact .contact-form form table tbody tr td .errorlist body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide li.author, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td label.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide label.author, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td input.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide input.author, body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide body#contact .contact-form form table tbody tr td textarea.author, body#contact .contact-form form table tbody tr td body#about .testimonials .wrap .swiper .swiper-wrapper .swiper-slide textarea.author {
+            margin-top: 28px; } }
+
+body#contact .contact.means .img-box {
+  margin: 0 auto;
+  position: relative; }
+  body#contact .contact.means .img-box img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+
+body#contact .contact.means ul li {
+  text-align: center; }
+  body#contact .contact.means ul li h4 {
+    font-weight: 300;
+    font-weight: 700; }
+    @media screen and (max-width: 1023px) {
+      body#contact .contact.means ul li h4 {
+        font-size: 16px;
+        line-height: 26px; } }
+    @media screen and (min-width: 1024px) {
+      body#contact .contact.means ul li h4 {
+        font-size: 20px;
+        line-height: 28px; } }
+
+body#contact .contact-form h2 {
+  margin: 0 auto;
+  text-align: center; }
+
+body#contact .contact-form form {
+  width: 100%; }
+  body#contact .contact-form form table {
+    width: 100%; }
+    body#contact .contact-form form table tbody tr th label {
+      text-align: right;
+      font-weight: 300;
+      display: inline-block; }
+    body#contact .contact-form form table tbody tr td {
+      width: 100%;
+      position: relative; }
+      body#contact .contact-form form table tbody tr td .errorlist li {
+        color: #8651FB; }
+      body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td textarea {
+        width: 100%;
+        border: none;
+        appearance: none;
+        outline: none;
+        background-color: transparent; }
+      body#contact .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td textarea {
+        font-weight: 300; }
+      body#contact .contact-form form table tbody tr td textarea {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex; }
+      body#contact .contact-form form table tbody tr td.submit input {
+        text-align: left; }
+        body#contact .contact-form form table tbody tr td.submit input:hover {
+          cursor: pointer;
+          color: #8651FB; }
+    body#contact .contact-form form table tbody tr td:last-of-type {
+      position: relative; }
+      body#contact .contact-form form table tbody tr td:last-of-type:before {
+        background: black;
+        background: linear-gradient(90deg, #8651fb 50%, black 100%);
+        content: "";
+        width: 100%;
+        height: 2px;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0; }
+
+@media screen and (max-width: 1023px) {
+  body#contact .contact.means .img-box {
+    width: 100%;
+    max-width: 400px;
+    height: 180px; }
+  body#contact .contact.means ul {
+    margin-top: 42px; }
+    body#contact .contact.means ul li {
+      margin-bottom: 28px; }
+      body#contact .contact.means ul li address {
+        padding-top: 5.6px; }
+  body#contact .contact-form {
+    padding-top: 56px;
+    padding-bottom: 84px; }
+    body#contact .contact-form .contact-space {
+      max-width: 400px;
+      margin: 28px auto 0; }
+      body#contact .contact-form .contact-space form table tbody tr th {
+        width: 100px;
+        height: 36px;
+        padding-top: 10px; }
+        body#contact .contact-form .contact-space form table tbody tr th label {
+          width: calc(100% - 15px);
+          margin-right: 15px; }
+      body#contact .contact-form .contact-space form table tbody tr td {
+        width: calc(100% - 100px); }
+        body#contact .contact-form .contact-space form table tbody tr td .errorlist {
+          margin-top: 20px; }
+        body#contact .contact-form .contact-space form table tbody tr td label, body#contact .contact-form .contact-space form table tbody tr td input {
+          padding: 10px 0; }
+        body#contact .contact-form .contact-space form table tbody tr td.submit input[type='submit'] {
+          margin-top: 21px;
+          width: 120px; }
+        body#contact .contact-form .contact-space form table tbody tr td.submit:before {
+          width: 120px; } }
+
+@media screen and (min-width: 1024px) {
+  body#contact .contact.means .img-box {
+    width: 90%;
+    max-width: 900px;
+    height: 500px; }
+  body#contact .contact.means ul {
+    margin-top: 84px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    body#contact .contact.means ul li {
+      width: 31.479%; }
+      body#contact .contact.means ul li p, body#contact .contact.means ul li .contact-form form table tbody tr th label, body#contact .contact-form form table tbody tr th .contact.means ul li label, body#contact .contact.means ul li .contact-form form table tbody tr td .errorlist li, body#contact .contact-form form table tbody tr td .errorlist .contact.means ul li li, body#contact .contact.means ul li .contact-form form table tbody tr td label, body#contact .contact-form form table tbody tr td .contact.means ul li label, body#contact .contact.means ul li .contact-form form table tbody tr td input, body#contact .contact-form form table tbody tr td .contact.means ul li input, body#contact .contact.means ul li .contact-form form table tbody tr td textarea, body#contact .contact-form form table tbody tr td .contact.means ul li textarea {
+        margin-bottom: 28px; }
+  body#contact .contact-form {
+    padding-top: 140px;
+    padding-bottom: 112px; }
+    body#contact .contact-form .contact-space {
+      width: 91.436%;
+      max-width: 1160px;
+      margin: 56px 0 56px 8.564%; }
+      body#contact .contact-form .contact-space form table tbody tr th {
+        width: 184px;
+        height: 38px;
+        padding-top: 28px; }
+        body#contact .contact-form .contact-space form table tbody tr th label {
+          width: calc(100% - 30px);
+          margin-right: 30px; }
+      body#contact .contact-form .contact-space form table tbody tr td {
+        width: calc(100% - 184px); }
+        body#contact .contact-form .contact-space form table tbody tr td .errorlist {
+          margin-top: 20px; }
+        body#contact .contact-form .contact-space form table tbody tr td label, body#contact .contact-form .contact-space form table tbody tr td input {
+          padding: 10px 0; }
+        body#contact .contact-form .contact-space form table tbody tr td.submit input[type='submit'] {
+          margin-top: 28px;
+          width: 200px; }
+        body#contact .contact-form .contact-space form table tbody tr td.submit:before {
+          width: 200px; } }

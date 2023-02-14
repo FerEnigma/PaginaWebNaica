@@ -1,0 +1,318 @@
+body#index {
+	.intro {
+		.wrap {
+			img {
+				width: 100%;
+			}
+			
+			h1, p {
+				position: relative;
+			}
+			
+			h1 {
+				margin: 0 auto;
+				
+				span {
+					display: block;
+					
+					&:first-child {
+						text-align: left;
+					}
+					
+					&:last-child {
+						text-align: right;
+					}
+				}
+			}
+			
+			p.p-xl, h2, p {
+				margin: 0 auto;
+				text-align: center;
+			}
+			
+			.video-space {
+				margin: 0 auto;
+				
+				video {
+					width: 100%;
+					margin: 0 auto;
+					display: block;
+				}
+			}
+			
+			a.cta {
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+	}
+	
+	.alliances {
+		.title {
+			position: relative;
+			
+			img {
+				position: absolute;
+			}
+		}
+		
+		.wrap {
+			.swiper {
+				&:before, &:after {
+					z-index: 2;
+				}
+				
+				.swiper-wrapper {
+					.swiper-slide {
+						img {
+							margin: 0 auto;
+							display: block;
+						}
+						
+						p {
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//Small
+@media screen and (max-width : $desktop - 1) {
+	body#index {
+		.intro {
+			.wrap {
+				h1 {
+					max-width: 320px;
+					letter-spacing: 4px;
+				}
+				
+				p.p-xl {
+					max-width: 480px;
+					margin-top: $base * .75;
+				}
+				
+				h2 {
+					max-width: 420px;
+					margin-top: $base * 1.5;
+				}
+				
+				p {
+					max-width: 520px;
+					margin-top: $base * .5;
+				}
+
+				.video-space {
+					width: 100%;
+					margin-top: $base;
+				}
+				
+				a.cta {
+					width: 260px;
+					margin: $base auto;
+				}
+			}
+		}
+		
+		.alliances {
+			padding-top: $base * 4;
+			padding-bottom: $base * 3;
+			
+			.wrap {
+				.title {
+					h2 {
+						max-width: 280px;
+						margin-left: 10%;
+					}
+					
+					img {
+						width: 200px;
+						position: absolute;
+						top: -120px;
+						left: calc(240px + 10%);
+					}
+				}
+				
+				.swiper {
+					background-color: $black;
+					width: 220px;
+					padding: 0 30px;
+					margin: $base*2 auto 0;
+
+					&:before, &:after {
+						content: "";
+						background-color: $black;
+						width: 30px;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						
+						display: block;
+					}
+					
+					&:before {
+						left: 0;
+					}
+					
+					&:after {
+						right: 0;
+					}
+				}
+				
+				.text-space {
+					margin-top: $base * 2;
+					
+					p {
+						margin: 0 10%;
+						//text-align: center;
+					}
+					
+					a.cta {
+						width: 90%;
+						max-width: 240px;
+						margin: $base 10%;
+					}
+				}
+			}
+		}
+	}
+}
+
+//Large
+@media screen and (min-width : $desktop) {
+	body#index {
+		.intro {
+			.wrap {
+				img {
+					padding-top: $base;
+				}
+				
+				h1 {
+					width: 65.7407%;
+					max-width: 720px;
+					margin-top: -300px;
+					letter-spacing: 10px;
+					
+					span {
+						line-height: 56px;
+					}
+				}
+				
+				p.p-xl {
+					width: 65.7407%;
+					max-width: 780px;
+					margin-top: $base * 2;
+					line-height: 56px;
+				}
+				
+				h2 {
+					width: 45.597%;
+					max-width: 492px;
+					margin-top: $base * 5;
+					line-height: 42px;
+				}
+				
+				p {
+					width: 65.735%;
+					margin-top: $base * 1.5;
+				}
+				
+				.video-space {
+					width: 82.9629%;
+					max-width: 980px;
+					margin: $base*5 auto;
+				}
+				
+				a.cta {
+					width: 320px;
+					margin-top: $base * 2;
+				}
+			}
+		}
+
+		.alliances {
+			.wrap {
+				padding-bottom: $base * 8;
+				
+				.title {
+					padding-top: $base * 5;
+					
+					img {
+						position: absolute;
+						top: 30px;
+						left: calc(8.564% + 800px);
+					}
+				}
+				
+				h2 {
+					width: 82%;
+					max-width: 860px;
+					margin-left: 8.564%;
+				}
+				
+				.swiper {
+					width: 82.863%;
+					margin-top: $base * 6;
+					padding: 0 8.5685%;
+					
+					&:before, &:after {
+						content: "";
+						background-color: $black;
+						width: 8.5685%;
+						height: 100%;
+						position: absolute;
+						top: 0;
+						
+						display: block;
+					}
+					
+					&:before {
+						left: 0;
+					}
+					
+					&:after {
+						right: 0;
+					}
+					
+					.swiper-wrapper {
+						.swiper-slide {
+							img {
+								width: 100%;
+								max-width: 200px;
+							}
+						}
+					}
+					
+					.btn-next {
+						right: 1.6%;
+					}
+					
+					.btn-prev {
+						left: 1.6%;
+					}
+				}
+				
+				.text-space {
+					margin-top: $base * 2;
+					@include flex();
+					//justify-content: space-between;
+					
+					p {
+						width: 65.735%;
+						max-width: 750px;
+						margin-left: 8.564%;
+					}
+					
+					a.cta {
+						//width: 248px;
+						width: 22.915%;
+						height: 28px;
+						margin-left: 2.777%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,113 @@
+{% load static %} {% load i18n %} {% load i18n_urls %} {% get_current_language as LANGUAGE_CODE %} {% get_available_languages as AVAILABLE_LANGUAGES %} {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Naica{% endblock %}</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- General scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="{% static 'myapp/js/general.js' %}"></script>
+
+    <!-- OG Styles -->
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;1,300;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body id="{% block id %}naica{% endblock %}">
+    {% block navigation %}
+    <header class="navigation-bar">
+        <div class="wrap">
+            <div class="mobile-menu">
+                <span id="SideMenuButton"><img src="{% static 'myapp/img/icons/menu.svg' %}" alt="{% translate 'Menu' %}"></span>
+            </div>
+
+            <a href="{% url 'index' %}" class="brand">
+                <img src="{% static 'myapp/img/naica-logo.svg' %}" alt="Naica">
+            </a>
+
+            <nav class="site-content" id="SideMenu">
+                <div class="mobile-close">
+                    <img src="{% static 'myapp/img/icons/close.svg' %}" alt="{% translate 'Close Menu' %}" id="CloseSideMenuButton">
+                </div>
+
+                <a href="{% url 'index' %}" class="brand">
+                    <img src="{% static 'myapp/img/naica-logo-alt.svg' %}" alt="Naica">
+                </a>
+
+                <ul class="main">
+                    <li>
+                        <a href="{% url 'about' %}">{% translate 'About' %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}">{% translate 'Contact' %}</a>
+                    </li>
+                    <li>
+                        <a href="https://portal.naica.mx/">{% translate 'Sign In' %}</a>
+                    </li>
+                </ul>
+
+                <ul class="lang-select">
+                    <li {% if LANGUAGE_CODE == 'en' %} class="active" {% endif %}>
+                        <a href="{% change_lang 'en' %}">EN</a>
+                    </li>
+                    <li {% if LANGUAGE_CODE == 'es' %} class="active" {% endif %}>
+                        <a href="{% change_lang 'es' %}">ES</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    {% endblock %} {% block content %}{% endblock %} {% block footer %}
+    <footer>
+        <div class="wrap">
+            <img class="brand" src="{% static 'myapp/img/naica-logo-alt.svg' %}" alt="Naica">
+
+            <ul class="sns">
+                <li>
+                    <a href="">
+                        <img src="{% static 'myapp/img/icons/sns/instagram.svg' %}" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="{% static 'myapp/img/icons/sns/facebook.svg' %}" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="{% static 'myapp/img/icons/sns/twitter.svg' %}" alt="Twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="{% static 'myapp/img/icons/sns/linkedin.svg' %}" alt="LinkedIn">
+                    </a>
+                </li>
+            </ul>
+
+            <nav>
+                <a href="{% url 'cookies' %}">{% translate 'Cookies policy' %}</a><a href="{% url 'privacy' %}">{% translate 'Privacy policy' %}</a>
+            </nav>
+
+            <span class="credits">© Naica Technologies S.A. de C.V., 2020</span>
+        </div>
+    </footer>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-08 03:41-0600\n"
+"PO-Revision-Date: 2022-12-08 03:42-0637\n"
+"Last-Translator:   <fernanda@enigma.mx>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: myapp/forms.py:6
+msgid "Name"
+msgstr "Nombre"
+
+#: myapp/forms.py:7
+msgid "e-mail"
+msgstr "e-mail"
+
+#: myapp/forms.py:8
+msgid "Phone"
+msgstr "Teléfono"
+
+#: myapp/models.py:17 myapp/templates/myapp/about.html:53
+msgid "Real State"
+msgstr "Bienes Raíces"
+
+#: myapp/models.py:18 myapp/templates/myapp/about.html:58
+msgid "Software"
+msgstr "Software"
+
+#: myapp/models.py:19 myapp/templates/myapp/about.html:63
+msgid "Construction"
+msgstr "Construcción"
+
+#: myapp/models.py:20 myapp/templates/myapp/about.html:68
+msgid "Trading Goods"
+msgstr "Comercio de bienes"
+
+#: myapp/models.py:38
+msgid "Testimonial text"
+msgstr "Texto del testimonio"
+
+#: myapp/models.py:39
+msgid "Testimonial author"
+msgstr "Autor del testimonio"
+
+#: myapp/templates/myapp/about.html:19
+msgid "A company with eyes <br>on the future"
+msgstr "Una compañía con ojos en el futuro"
+
+#: myapp/templates/myapp/about.html:21
+msgid ""
+"The future of it’s operations and the success of it’s current business "
+"endeavors through highly skilled business advisors and the use of technology"
+" in our day to day operations. We aim to expand and cover more ground as we "
+"grow."
+msgstr ""
+"El futuro de sus operaciones y el éxito de los actuales esfuerzos "
+"comerciales a través de asesores comerciales altamente calificados y el uso "
+"de tecnología en nuestras operaciones diarias. Nuestro objetivo es "
+"expandirnos y cubrir más terreno a medida que crecemos."
+
+#: myapp/templates/myapp/about.html:28
+msgid ""
+"We develop financial strategies <span class=\"hl\">& business "
+"endeavors</span> <span class=\"hl alt\">that promote wealth growth for "
+"all.</span>"
+msgstr ""
+"Desarrollamos estrategias financieras <span class=\"hl\">y proyectos "
+"empresariales</span> <span class=\"hl alt\">que promueven el "
+"crecimiento.</span>"
+
+#: myapp/templates/myapp/about.html:30
+msgid ""
+"This benefit our community of business savvy individuals, companies of all "
+"sizes and strategic allies. Through meticulous asset & project evaluations "
+"we aim to boost the development of every member of our community."
+msgstr ""
+"Esto beneficia a nuestra comunidad de personas orientadas a negocios, "
+"empresas de todos los tamaños y nuestros aliados estratégicos. A través de "
+"evaluaciones meticulosas de activos y proyectos, pretendemos impulsar el "
+"desarrollo de nuestra comunidad."
+
+#: myapp/templates/myapp/about.html:33
+msgid "We work with:"
+msgstr "Trabajamos con:"
+
+#: myapp/templates/myapp/about.html:35
+msgid "Individuals"
+msgstr "Particulares"
+
+#: myapp/templates/myapp/about.html:36
+msgid "Producers"
+msgstr "Productores"
+
+#: myapp/templates/myapp/about.html:37
+msgid "Importers & exporters"
+msgstr "Importadores y exportadores"
+
+#: myapp/templates/myapp/about.html:38
+msgid "SMEs"
+msgstr "PyMES"
+
+#: myapp/templates/myapp/about.html:39
+msgid "Corporations"
+msgstr "Compañias"
+
+#: myapp/templates/myapp/about.html:40
+msgid "Start-ups"
+msgstr "Start-ups"
+
+#: myapp/templates/myapp/about.html:48
+msgid ""
+"We are constantly looking for investment opportunities within the following "
+"industries:"
+msgstr ""
+
+#: myapp/templates/myapp/about.html:54
+msgid "Buying, improving,<br> selling & developing."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:59
+msgid "Financial and high end software development."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:64
+msgid "Linking construction companies to investors."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:69
+msgid "Linking importers and exporters to producers."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:73
+msgid ""
+"Our involvement in such sectors and specific locations of Mexico and the "
+"United States allows us to guarantee steady returns and constant growth."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:79
+msgid "Sound foundations are everything"
+msgstr ""
+
+#: myapp/templates/myapp/about.html:80
+msgid ""
+"They give us a clear path and help us advance towards our main goals: growth"
+" and transcendence. Transcend to leave a positive mark and grow mindfully to"
+" lead our community’s wellbeing."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:84
+msgid "Values"
+msgstr ""
+
+#: myapp/templates/myapp/about.html:85
+msgid ""
+"With the best practices & high standards that permeate our company's "
+"culture."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:88
+msgid "Synergy"
+msgstr ""
+
+#: myapp/templates/myapp/about.html:89
+msgid "To be the link between business endeavors & potential partners."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:92
+msgid "Disruption"
+msgstr "Disrupción"
+
+#: myapp/templates/myapp/about.html:93
+msgid "Exploring new solutions to the challenges our community might face."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:96
+msgid "Technology"
+msgstr ""
+
+#: myapp/templates/myapp/about.html:97
+msgid "As a vehicle for level-headed decision making through data analysis."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:107
+msgid "Our alliances<br> make us <strong>stronger</strong>"
+msgstr ""
+
+#: myapp/templates/myapp/about.html:110
+msgid ""
+"We see collaboration as a way to learn from each other in order to get the "
+"most out of our collective knowledge and experiences."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:123 myapp/templates/myapp/index.html:55
+msgid "No allies yet."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:126
+msgid ""
+"Naica and it’s allies serve as a platform of sorts to help new business grow"
+" and develop."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:132
+msgid "With every project our<br> community<br> gets tighter and tighter"
+msgstr ""
+
+#: myapp/templates/myapp/about.html:133
+msgid "Know more about our contributions with members of our community."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:150
+msgid "No testimonials yet."
+msgstr "No hay testimonios aún."
+
+#: myapp/templates/myapp/about.html:162 myapp/templates/myapp/index.html:72
+msgid "You might want to join our disruptive community"
+msgstr ""
+
+#: myapp/templates/myapp/about.html:163 myapp/templates/myapp/index.html:73
+msgid "Get in contact so we can talk and see if we can grow together."
+msgstr ""
+
+#: myapp/templates/myapp/about.html:164
+msgid "Contact us"
+msgstr "Contáctanos"
+
+#: myapp/templates/myapp/base.html:40
+msgid "Menu"
+msgstr "Menú"
+
+#: myapp/templates/myapp/base.html:49
+msgid "Close Menu"
+msgstr "Cerrar Menú"
+
+#: myapp/templates/myapp/base.html:58
+msgid "About"
+msgstr "Acerca de"
+
+#: myapp/templates/myapp/base.html:61
+msgid "Contact"
+msgstr "Contacto"
+
+#: myapp/templates/myapp/base.html:64
+msgid "Sign In"
+msgstr "Acceso"
+
+#: myapp/templates/myapp/base.html:109
+msgid "Cookies policy"
+msgstr "Política de Cookies"
+
+#: myapp/templates/myapp/base.html:109
+msgid "Privacy policy"
+msgstr "Aviso de privacidad"
+
+#: myapp/templates/myapp/contact.html:19
+msgid "Miami"
+msgstr ""
+
+#: myapp/templates/myapp/contact.html:28
+msgid "Mexico City"
+msgstr ""
+
+#: myapp/templates/myapp/contact.html:37
+msgid "Cuernavaca"
+msgstr ""
+
+#: myapp/templates/myapp/contact.html:51
+msgid "Get in touch"
+msgstr ""
+
+#: myapp/templates/myapp/contact.html:55
+msgid "Your message was submitted successfully. Thank you."
+msgstr ""
+
+#: myapp/templates/myapp/contact.html:63
+msgid "SEND"
+msgstr ""
+
+#: myapp/templates/myapp/index.html:15
+msgid "<span>Ascendant</span> <span>technology</span>"
+msgstr "<span>Ascendant</span> <span>technology</span>"
+
+#: myapp/templates/myapp/index.html:17
+msgid ""
+"We develop high-impact projects with clear strategies that promote positive "
+"growth in Mexico and the United States"
+msgstr ""
+
+#: myapp/templates/myapp/index.html:25
+msgid "Working towards innovative & technological solutions"
+msgstr ""
+
+#: myapp/templates/myapp/index.html:27
+msgid ""
+"Naica is compelled to acquire expertise and apply it into improving any "
+"process through technology. Breaking business-making paradigms by disrupting"
+" the status quo of projects with social and economic results."
+msgstr ""
+
+#: myapp/templates/myapp/index.html:29 myapp/templates/myapp/index.html:75
+msgid "Know more about us"
+msgstr ""
+
+#: myapp/templates/myapp/index.html:36
+msgid "Meaningful alliances are key"
+msgstr ""
+
+#: myapp/templates/myapp/index.html:59
+msgid ""
+"Our capacity to discover and connect individuals and business enterprises to"
+" various endeavours make us a trustworthy companion."
+msgstr ""
+
+#: myapp/templates/myapp/index.html:60
+msgid "See all our alliances"
+msgstr ""
+
+#: myapp/urls.py:10
+#| msgid "About"
+msgid "about/"
+msgstr "acerca-de/"
+
+#: myapp/urls.py:12
+#| msgid "Contact"
+msgid "contact/"
+msgstr "contacto/"
+
+#: myapp/urls.py:14
+msgid "cookies/"
+msgstr "cookies/"
+
+#: myapp/urls.py:16
+msgid "privacy/"
+msgstr "politica-privacidad/"
+
+#: naicaweb/settings.py:131
+msgid "English"
+msgstr "Inglés"
+
+#: naicaweb/settings.py:132
+msgid "Spanish"
+msgstr "Español"

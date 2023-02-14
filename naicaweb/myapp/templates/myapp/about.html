@@ -1,0 +1,182 @@
+{% extends "myapp/base.html" %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %}About Naica{% endblock %}
+
+{% block id %}about{% endblock %}
+
+{% block content %}
+	<section class="intro">
+		<div class="wrap">
+			<div class="img-box transitionable">
+				<img src="{% static 'myapp/img/about-1.png' %}" alt="">
+				<img src="{% static 'myapp/img/about-2.png' %}" alt="">
+			</div>
+			
+			<div class="text-box">
+				<h1 class="title-xl">{% blocktranslate %}A company with eyes <br>on the future{% endblocktranslate %}</h1>
+				
+				<p>{% translate 'The future of it’s operations and the success of it’s current business endeavors through highly skilled business advisors and the use of technology in our day to day operations. We aim to expand and cover more ground as we grow.' %}</p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="what-we-do">
+		<div class="wrap">
+			<h2>{% blocktranslate %}We develop financial strategies <span class="hl">& business endeavors</span> <span class="hl alt">that promote wealth growth for all.</span>{% endblocktranslate %}</h2>
+			
+			<p>{% translate 'This benefit our community of business savvy individuals, companies of all sizes and strategic allies. Through meticulous asset & project evaluations we aim to boost the development of every member of our community.' %}</p>
+			
+			<div class="transitionable">
+				<h4>{% translate 'We work with:' %}</h4>
+				<ul>
+					<li>{% translate 'Individuals' %}</li>
+					<li>{% translate 'Producers' %}</li>
+					<li>{% translate 'Importers & exporters' %}</li>
+					<li>{% translate 'SMEs' %}</li>
+					<li>{% translate 'Corporations' %}</li>
+					<li>{% translate 'Start-ups' %}</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	
+	<section class="investment-sectors">
+		<div class="wrap">
+			<h2>{% translate 'We are constantly looking for investment opportunities within the following industries:' %}</h2>
+			
+			<ul class="transitionable">
+				<li>
+					<img src="{% static 'myapp/img/icons/real-state.png' %}" alt="">
+					<h4>{% translate 'Real State' %}</h4>
+					<p class="p-sm">{% blocktranslate %}Buying, improving,<br> selling & developing.{% endblocktranslate %}</p>
+				</li>
+				<li>
+					<img src="{% static 'myapp/img/icons/software.png' %}" alt="">
+					<h4>{% translate 'Software' %}</h4>
+					<p class="p-sm">{% translate 'Financial and high end software development.' %}</p>
+				</li>
+				<li>
+					<img src="{% static 'myapp/img/icons/construction.png' %}" alt="">
+					<h4>{% translate 'Construction' %}</h4>
+					<p class="p-sm">{% translate 'Linking construction companies to investors.' %}</p>
+				</li>
+				<li>
+					<img src="{% static 'myapp/img/icons/trading-goods.png' %}" alt="">
+					<h4>{% translate 'Trading Goods' %}</h4>
+					<p class="p-sm">{% translate 'Linking importers and exporters to producers.' %}</p>
+				</li>
+			</ul>
+			
+			<h4>{% translate 'Our involvement in such sectors and specific locations of Mexico and the United States allows us to guarantee steady returns and constant growth.' %}</h4>
+		</div>
+	</section>
+	
+	<section class="about">
+		<div class="wrap">
+			<h2 class="title-xl transitionable">{% translate 'Sound foundations are everything' %}</h2>
+			<h3>{% translate 'They give us a clear path and help us advance towards our main goals: growth and transcendence. Transcend to leave a positive mark and grow mindfully to lead our community’s wellbeing.' %}</h3>
+			
+			<ul>
+				<li class="transitionable">
+					<h4 class="sc">{% translate 'Values' %}</h4>
+					<p class="sm">{% translate "With the best practices & high standards that permeate our company's culture." %}</p>
+				</li>
+				<li class="transitionable">
+					<h4 class="sc">{% translate 'Synergy' %}</h4>
+					<p class="sm">{% translate 'To be the link between business endeavors & potential partners.' %}</p>
+				</li>
+				<li class="transitionable">
+					<h4 class="sc">{% translate 'Disruption' %}</h4>
+					<p class="sm">{% translate 'Exploring new solutions to the challenges our community might face.' %}</p>
+				</li>
+				<li class="transitionable">
+					<h4 class="sc">{% translate 'Technology' %}</h4>
+					<p class="sm">{% translate 'As a vehicle for level-headed decision making through data analysis.' %}</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	
+	<section class="alliances">
+		<div class="wrap">
+			<div class="text-box transitionable">
+				<img src="{% static 'myapp/img/deco/sparks-01.png' %}" alt="">
+				<h2 class="title-xl">{% blocktranslate %}Our alliances<br> make us <strong>stronger</strong>{% endblocktranslate %}</h2>
+			</div>
+		
+			<h3>{% translate 'We see collaboration as a way to learn from each other in order to get the most out of our collective knowledge and experiences.' %}</h3>
+			
+			<h4>15 allies | +10 countries | +5 industries | +100 projects side by side</h4>
+			
+			{% if ally_list %}
+			<ul>
+			    {% for ally in ally_list %}
+			    <li>
+					<img src="{{ally.ally_image.url}}" alt="{{ ally.ally_name }}">
+				</li>
+			    {% endfor %}
+			</ul>
+			{% else %}
+			    <p>{% translate 'No allies yet.' %}</p>
+			{% endif %}
+			
+			<p>{% translate 'Naica and it’s allies serve as a platform of sorts to help new business grow and develop.' %}</p>
+		</div>
+	</section>
+	
+	<section class="testimonials">
+		<div class="wrap">
+			<h2>{% blocktranslate %}With every project our<br> community<br> gets tighter and tighter{% endblocktranslate %}</h2>
+			<p>{% translate 'Know more about our contributions with members of our community.' %}</p>
+			
+			{% if testimonial_list %}
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+			    {% for testimonial in testimonial_list %}
+					<div class="swiper-slide">
+						<p>{{ testimonial.testimonial_text }}</p>
+						<p class="author">— {{ testimonial.testimonial_author }}</p>
+					</div>
+			    {% endfor %}
+				</div>
+				
+				<div class="btn-next"></div>
+				<div class="btn-prev"></div>
+			</div>
+			{% else %}
+			    <p>{% translate 'No testimonials yet.' %}</p>
+			{% endif %}
+		</div>
+	</section>
+	
+	<section class="cta-box transitionable">
+		<div class="wrap">
+			<div class="img-cont">
+					<img src="{% static 'myapp/img/get-in-touch-02.jpg' %}" alt="Business meeting">
+				</div>
+			
+			<div class="text-space">
+				<h2>{% translate 'You might want to join our disruptive community' %}</h2>
+				<p>{% translate 'Get in contact so we can talk and see if we can grow together.' %}</p>
+				<a href="{% url 'contact' %}" class="cta alt">{% translate 'Contact us' %}</a>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+	
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper(".mySwiper", {
+			spaceBetween: 30,
+			navigation: {
+				nextEl: ".btn-next",
+				prevEl: ".btn-prev",
+			},
+		});
+	</script>
+{% endblock %}

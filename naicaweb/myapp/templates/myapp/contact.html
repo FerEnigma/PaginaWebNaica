@@ -1,0 +1,73 @@
+{% extends "myapp/base.html" %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %}Contact{% endblock %}
+
+{% block id %}contact{% endblock %}
+
+{% block content %}
+	<section class="contact means">
+		<div class="wrap">
+			<div class="img-box transitionable">
+				<img src="{% static 'myapp/img/deco/map.png' %}" alt="Map">
+			</div>
+			
+			<ul class="transitionable">
+				<li>
+					<h4>{% translate 'Miami' %}</h4>
+					<p>World Plaza</p>
+					
+					<address>600 Brickell Avenue,</br>
+					Suite 1710</br>
+					Miami, Florida</br>
+					Phone. <a href="">559 047 0966</a></address>
+				</li>
+				<li>
+					<h4>{% translate 'Mexico City' %}</h4>
+					<p>Torre Mayor</p>
+					
+					<address>Av. Paseo de la Reforma 505,</br>
+					Cuauhtémoc 06500,</br>
+					Ciudad de México, México.</br>
+					Phone. <a href="">559 047 0966</a></address>
+				</li>
+				<li>
+					<h4>{% translate 'Cuernavaca' %}</h4>
+					<p>Villas del Lago</p>
+					
+					<address>Av. Domingo Diez 1589-12,</br>
+					El Empleado 62250,</br>
+					Cuernavaca, Morelos, México.</br>
+					Phone. <a href="">559 047 0966</a></address>
+				</li>
+			</ul>
+		</div>
+	</section>
+	
+	<section class="contact-form transitionable">
+		<div class="wrap">
+			<h2 class="title-xl">{% translate 'Get in touch' %}</h2>
+			
+			<div class="contact-space">
+				{% if submitted %}
+					<p class="success">{% translate 'Your message was submitted successfully. Thank you.' %}</p>
+				{% else %}
+					<form action="" method="post" novalidate="">
+						<table>
+							{{ form.as_table }}
+							<tr>
+								<th>&nbsp;</th>
+								<td class="submit">
+									<input type="submit" value="{% translate 'SEND' %}">
+								</td>
+							</tr>
+						</table>
+						{% csrf_token %}
+					</form>
+				{% endif %}
+			</div>
+		</div>
+	</section>
+{% endblock %}
