@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-08 03:41-0600\n"
-"PO-Revision-Date: 2022-12-08 03:42-0637\n"
+"PO-Revision-Date: 2023-04-03 09:55-0637\n"
 "Last-Translator:   <fernanda@enigma.mx>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -125,32 +125,37 @@ msgid ""
 "We are constantly looking for investment opportunities within the following "
 "industries:"
 msgstr ""
+"Estamos constantemente buscando oportunidades de inversión dentro de las "
+"siguientes industrias:"
 
 #: myapp/templates/myapp/about.html:54
 msgid "Buying, improving,<br> selling & developing."
-msgstr ""
+msgstr "Compra, mejora, <br> venta y desarrollo."
 
 #: myapp/templates/myapp/about.html:59
 msgid "Financial and high end software development."
-msgstr ""
+msgstr "Desarrollo de software financiero y de alta calidad."
 
 #: myapp/templates/myapp/about.html:64
 msgid "Linking construction companies to investors."
-msgstr ""
+msgstr "Vinculación de empresas constructoras a inversores."
 
 #: myapp/templates/myapp/about.html:69
 msgid "Linking importers and exporters to producers."
-msgstr ""
+msgstr "Vinculación de los importadores y exportadores con los productores."
 
 #: myapp/templates/myapp/about.html:73
 msgid ""
 "Our involvement in such sectors and specific locations of Mexico and the "
 "United States allows us to guarantee steady returns and constant growth."
 msgstr ""
+"Nuestra participación en dichos sectores y ubicaciones específicas de México"
+" y Estados Unidos nos permite garantizar rendimientos estables y un "
+"crecimiento constante."
 
 #: myapp/templates/myapp/about.html:79
 msgid "Sound foundations are everything"
-msgstr ""
+msgstr "Unas bases sólidas lo son todo"
 
 #: myapp/templates/myapp/about.html:80
 msgid ""
@@ -158,24 +163,31 @@ msgid ""
 " and transcendence. Transcend to leave a positive mark and grow mindfully to"
 " lead our community’s wellbeing."
 msgstr ""
+"Nos dan un camino claro y nos ayudan a avanzar hacia nuestros principales "
+"objetivos: el crecimiento y la trascendencia. Trascender para dejar una "
+"huella positiva y crecer conscientemente para liderar el bienestar de "
+"nuestra comunidad."
 
 #: myapp/templates/myapp/about.html:84
 msgid "Values"
-msgstr ""
+msgstr "Valores"
 
 #: myapp/templates/myapp/about.html:85
 msgid ""
 "With the best practices & high standards that permeate our company's "
 "culture."
 msgstr ""
+"Con las mejores prácticas y altos estándares que permean la cultura de "
+"nuestra empresa."
 
 #: myapp/templates/myapp/about.html:88
 msgid "Synergy"
-msgstr ""
+msgstr "Sinergia"
 
 #: myapp/templates/myapp/about.html:89
 msgid "To be the link between business endeavors & potential partners."
 msgstr ""
+"Ser el vínculo entre los esfuerzos comerciales y los socios potenciales."
 
 #: myapp/templates/myapp/about.html:92
 msgid "Disruption"
@@ -184,42 +196,52 @@ msgstr "Disrupción"
 #: myapp/templates/myapp/about.html:93
 msgid "Exploring new solutions to the challenges our community might face."
 msgstr ""
+"Explorar nuevas soluciones a los desafíos que podría enfrentar nuestra "
+"comunidad."
 
 #: myapp/templates/myapp/about.html:96
 msgid "Technology"
-msgstr ""
+msgstr "Tecnología"
 
 #: myapp/templates/myapp/about.html:97
 msgid "As a vehicle for level-headed decision making through data analysis."
 msgstr ""
+"Como un vehículo para la toma de decisiones sensata a través del análisis de"
+" datos."
 
 #: myapp/templates/myapp/about.html:107
 msgid "Our alliances<br> make us <strong>stronger</strong>"
-msgstr ""
+msgstr "Nuestras alianzas<br> nos<strong> fortalecen</strong>"
 
 #: myapp/templates/myapp/about.html:110
 msgid ""
 "We see collaboration as a way to learn from each other in order to get the "
 "most out of our collective knowledge and experiences."
 msgstr ""
+"Vemos la colaboración como una forma de aprender unos de otros para "
+"aprovechar al máximo nuestro conocimiento y experiencias colectivas."
 
 #: myapp/templates/myapp/about.html:123 myapp/templates/myapp/index.html:55
 msgid "No allies yet."
-msgstr ""
+msgstr "Aún no hay aliados."
 
 #: myapp/templates/myapp/about.html:126
 msgid ""
 "Naica and it’s allies serve as a platform of sorts to help new business grow"
 " and develop."
 msgstr ""
+"Naica y sus aliados sirven como una plataforma para ayudar al crecimiento y "
+"desarrollo de nuevos negocios."
 
 #: myapp/templates/myapp/about.html:132
 msgid "With every project our<br> community<br> gets tighter and tighter"
-msgstr ""
+msgstr "Con cada proyecto nuestra<br> comunidad<br> se hace más y más unida"
 
 #: myapp/templates/myapp/about.html:133
 msgid "Know more about our contributions with members of our community."
 msgstr ""
+"Conoce más acerca de nuestras contribuciones con los miembros de nuestra "
+"comunidad."
 
 #: myapp/templates/myapp/about.html:150
 msgid "No testimonials yet."
@@ -227,11 +249,11 @@ msgstr "No hay testimonios aún."
 
 #: myapp/templates/myapp/about.html:162 myapp/templates/myapp/index.html:72
 msgid "You might want to join our disruptive community"
-msgstr ""
+msgstr "Es posible que desees unirte a nuestra comunidad disruptiva"
 
 #: myapp/templates/myapp/about.html:163 myapp/templates/myapp/index.html:73
 msgid "Get in contact so we can talk and see if we can grow together."
-msgstr ""
+msgstr "Ponte en contacto para conversar y saber cómo podemos crecer juntos."
 
 #: myapp/templates/myapp/about.html:164
 msgid "Contact us"
@@ -267,27 +289,27 @@ msgstr "Aviso de privacidad"
 
 #: myapp/templates/myapp/contact.html:19
 msgid "Miami"
-msgstr ""
+msgstr "Miami"
 
 #: myapp/templates/myapp/contact.html:28
 msgid "Mexico City"
-msgstr ""
+msgstr "Ciudad de México"
 
 #: myapp/templates/myapp/contact.html:37
 msgid "Cuernavaca"
-msgstr ""
+msgstr "Cuernavaca"
 
 #: myapp/templates/myapp/contact.html:51
 msgid "Get in touch"
-msgstr ""
+msgstr "Ponte en contacto "
 
 #: myapp/templates/myapp/contact.html:55
 msgid "Your message was submitted successfully. Thank you."
-msgstr ""
+msgstr "Su mensaje fue enviado exitosamente. Gracias. "
 
 #: myapp/templates/myapp/contact.html:63
 msgid "SEND"
-msgstr ""
+msgstr "ENVIAR"
 
 #: myapp/templates/myapp/index.html:15
 msgid "<span>Ascendant</span> <span>technology</span>"
@@ -298,10 +320,12 @@ msgid ""
 "We develop high-impact projects with clear strategies that promote positive "
 "growth in Mexico and the United States"
 msgstr ""
+"Desarrollamos proyectos de alto impacto con estrategias claras que promuevan"
+" un crecimiento positivo en México y Estados Unidos"
 
 #: myapp/templates/myapp/index.html:25
 msgid "Working towards innovative & technological solutions"
-msgstr ""
+msgstr "Trabajando hacia soluciones innovadoras y tecnológicas"
 
 #: myapp/templates/myapp/index.html:27
 msgid ""
@@ -309,24 +333,29 @@ msgid ""
 "process through technology. Breaking business-making paradigms by disrupting"
 " the status quo of projects with social and economic results."
 msgstr ""
+"En Naica adquirimos y aplicamos expertise para mejorar cualquier proceso a "
+"través de la tecnología. Romper paradigmas empresariales al romper el status"
+" quo de los proyectos con resultados sociales y económicos."
 
 #: myapp/templates/myapp/index.html:29 myapp/templates/myapp/index.html:75
 msgid "Know more about us"
-msgstr ""
+msgstr "Conoce más sobre nosotros"
 
 #: myapp/templates/myapp/index.html:36
 msgid "Meaningful alliances are key"
-msgstr ""
+msgstr "Las alianzas significativas son clave"
 
 #: myapp/templates/myapp/index.html:59
 msgid ""
 "Our capacity to discover and connect individuals and business enterprises to"
 " various endeavours make us a trustworthy companion."
 msgstr ""
+"Nuestra capacidad para descubrir y conectar a individuos y empresas con "
+"diversos emprendimientos nos convierte en un compañero confiable."
 
 #: myapp/templates/myapp/index.html:60
 msgid "See all our alliances"
-msgstr ""
+msgstr "Ver todas nuestras alianzas"
 
 #: myapp/urls.py:10
 #| msgid "About"
